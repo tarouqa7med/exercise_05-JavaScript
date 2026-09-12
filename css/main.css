@@ -1,0 +1,19 @@
+
+body {
+        background: linear-gradient(to right, #243b55, #141e30);
+}
+body section {
+        margin-block: 75px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+body section .image {
+        width: 100%;
+}
+body section .image img {
+        width: 300px;
+        margin: auto;
+        display: block;
+}
