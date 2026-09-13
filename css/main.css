@@ -1,4 +1,7 @@
 
+:root {
+        --mainColor: #ba944d;
+}
 body {
         background: linear-gradient(to right, #243b55, #141e30);
 }
@@ -8,12 +11,74 @@ body section {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
 }
 body section .image {
         width: 100%;
 }
 body section .image img {
-        width: 300px;
+        width: 200px;
         margin: auto;
         display: block;
+}
+body section .form {
+        margin-top: 75px;
+        padding: 25px 20px;
+        width: 35%;
+        min-width: 250px;
+        background: linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+        border-radius: 20px;
+}
+body section .form h2 {
+        color: var(--mainColor);
+}
+body section .form form div,
+body section .search {
+        display: flex;
+}
+body section .form form div label,
+body section .search label {
+        background-color: white;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #dee2e6;
+        border-right: none;
+        border-radius: 10px 0 0 10px;
+}
+body section .form form div label i,
+body section .search label i {
+        color: var(--mainColor);
+        font-size: 18px;
+}
+body section .form form div input,
+body section .search input {
+        width: 100%;
+        height: 45px;
+        margin-bottom: 15px;
+        border: 1px solid #dee2e6;
+        border-radius: 0 10px 10px 0;
+}
+body section .form form button {
+        height: 45px;
+        font-size: 15px;
+}
+body section .search {
+        margin-block: 35px;
+        width: 300px;
+}
+body section .table {
+        width: 85%;
+}
+body section .table table {
+        width: 100%;
+        border-bottom-color: #343e4b;
+}
+body section .table table thead th {
+        padding: 10px;
+        width: calc(100% / 7);
+        background-color: #212529;
+        color: white;
 }

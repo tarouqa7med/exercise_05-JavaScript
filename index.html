@@ -3,7 +3,7 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/all.min.css">
+        <link rel="stylesheet" href="./css/FontAwesome/all.min.css">
         <link rel="stylesheet" href="./css/bootstrap/bootstrap.css">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="icon" href="./images/logo.png">
@@ -12,44 +12,65 @@
 <body>
         
         <section>
-                <div class="image">
+                <!-- <div class="image">
                         <img src="./images/logo.png" alt="">
                 </div>
                 <div class="form">
-                        <h2>Students System</h2>
-                        <form action="" method="post">
+                        <h2 class="text-center pb-4">Students System</h2>
+                        <form action="" method="get">
                                 <div>
-                                        <label for="">
-                                                <i></i>
+                                        <label for="firstName">
+                                                <i class="fa-solid fa-user"></i>
                                         </label>
-                                        <input type="text">
+                                        <input type="text" id="firstName" name="firstName" autocomplete="off" placeholder="First Name *">
                                 </div>
                                 <div>
-                                        <label for="">
-                                                <i></i>
+                                        <label for="lastName">
+                                                <i class="fa-solid fa-user"></i>
                                         </label>
-                                        <input type="text">
+                                        <input type="text" id="lastName" name="lastName" autocomplete="off" placeholder="Last Name *">
                                 </div>
                                 <div>
-                                        <label for="">
-                                                <i></i>
+                                        <label for="email">
+                                                <i class="fa-solid fa-envelope"></i>
                                         </label>
-                                        <input type="text">
+                                        <input type="text" id="email" name="email" autocomplete="off" placeholder="Email *">
                                 </div>
                                 <div>
-                                        <label for="">
-                                                <i></i>
+                                        <label for="age">
+                                                <i class="fa-solid fa-hashtag"></i>
                                         </label>
-                                        <input type="text">
+                                        <input type="text" id="age" name="age" autocomplete="off" placeholder="Age *">
                                 </div>
                                 <div>
-                                        <label for="">
-                                                <i></i>
+                                        <label for="mobileNumber">
+                                                <i class="fa-solid fa-mobile"></i>
                                         </label>
-                                        <input type="text">
+                                        <input type="text" id="mobileNumber" name="mobileNumber" autocomplete="off" placeholder="Phone *">
                                 </div>
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="submit" class="btn btn-success d-block w-100">Add</button>
                         </form>
+                </div>
+                <div class="search">
+                        <label for="search">
+                                <i class="fa-solid fa-search"></i>
+                        </label>
+                        <input type="text" id="search" name="search" autocomplete="off" placeholder="Search...">
+                </div> -->
+                <div class="table">
+                        <table>
+                                <thead>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Email</th>
+                                        <th>Age</th>
+                                        <th>Phone</th>
+                                        <th>Option</th>
+                                </thead>
+                                <tbody></tbody>
+                                <tfoot></tfoot>
+                        </table>
                 </div>
         </section>
         <script src="./js/bootstrap.js"></script>
