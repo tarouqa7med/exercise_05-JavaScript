@@ -39,30 +39,31 @@ body section .search {
 body section .form form div label,
 body section .search label {
         background-color: white;
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
         border: 1px solid #dee2e6;
         border-right: none;
-        border-radius: 10px 0 0 10px;
+        border-radius: 6px 0 0 6px;
 }
 body section .form form div label i,
 body section .search label i {
         color: var(--mainColor);
-        font-size: 18px;
+        font-size: 15px;
 }
 body section .form form div input,
 body section .search input {
+        padding-left: 15px;
         width: 100%;
-        height: 45px;
+        height: 35px;
         margin-bottom: 15px;
         border: 1px solid #dee2e6;
-        border-radius: 0 10px 10px 0;
+        border-radius: 0 6px 6px 0;
 }
 body section .form form button {
-        height: 45px;
+        height: 35px;
         font-size: 15px;
 }
 body section .search {
@@ -81,4 +82,15 @@ body section .table table thead th {
         width: calc(100% / 7);
         background-color: #212529;
         color: white;
+}
+body section .table table thead th:nth-child(1),
+body section .table table thead th:nth-child(5) {
+        width: calc(100% / 18);
+        background-color: red;
+}
+body section .table table thead th:nth-child(2),
+body section .table table thead th:nth-child(3),
+body section .table table thead th:nth-child(4) {
+        width: calc(100% / 5);
+        background-color: green;
 }
