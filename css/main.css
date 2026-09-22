@@ -24,3 +24,14 @@ body section form span i {
 .insertedData .container {
         width: 85%;
 }
+table.table {
+        width: max-content;
+}
+table.table th,
+table.table td {
+        padding-inline: 35px;
+}
+table.table th:first-child,
+table.table td:first-child {
+        padding-inline: 15px;
+}

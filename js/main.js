@@ -1,7 +1,6 @@
 
 let form = document.querySelector("form"),
         formInputs = form.querySelectorAll("input"),
-        students = [],
         id = 0,
         tBody = document.querySelector("tbody"),
         regex = {
@@ -10,29 +9,35 @@ let form = document.querySelector("form"),
                 'email': /^[a-z][a-z0-9\.]+@(gmail|yahoo|outlook|hotmail)\.(com|org|edu)$/,
                 'age': /^[0-9]{1,2}$/,
                 'mobile': /\+20+(\s?)1(0|1|2|5)[0-9]{8}$/
-        };
+        },
+        searchInput = document.querySelector("input#search");
+        
+        console.log(searchInput)
+
+if (localStorage.getItem('students') === null) {
+        students = [];
+        updateLocalStorage();
+} else {
+        students = JSON.parse(localStorage.getItem('students'));
+        id = students[students.length - 1]?.id ?? 0;
+        showStudents(students);
+}
 
 form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        let focusInput = form.querySelector("input:focus");
-        focusInput?.blur();
-
-        let invalidInput = form.querySelector("input.is-invalid");
-        if (invalidInput !== null) {
-                return;
+        let formType = form.getAttribute("data-type");
+        if (formType == "add") {
+                addStudent();
+        } else if (formType == "edit") {
+                editStudent();
         }
 
-        let student = getStudent(++id);
-
-        students.push(student);
-
-        console.log(student)
-        console.log(students)
-
-        showStudent(student);
-
-        formReset();
+        
 
         // addStudent(student);
+})
+
+searchInput.addEventListener("keyup", function () {
+        search(this.value)
 })
