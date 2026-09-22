@@ -49,17 +49,28 @@ function inputCheck(input) {
         if (inputValue === "") {
                 input.classList.add("is-invalid");
                 input.classList.remove("is-valid");
+                input.dataset.valid = false;
                 warningP.classList.remove("d-none");
                 warningP.textContent = "This field is required"
         } else if (!isValid) {
                 input.classList.add("is-invalid");
                 input.classList.remove("is-valid");
+                input.dataset.valid = false;
                 warningP.classList.remove("d-none");
                 warningP.textContent = "Invalid Field"
         } else {
                 input.classList.add("is-valid")
                 input.classList.remove("is-invalid");
+                input.dataset.valid = true;
                 warningP.classList.add("d-none");
                 warningP.textContent = "";
         }
+}
+
+function formReset() {
+        form.reset();
+
+        formInputs.forEach(function (input) {
+                input.classList.remove("isvalid");
+        })
 }
