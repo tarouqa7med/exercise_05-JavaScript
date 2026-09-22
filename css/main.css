@@ -3,97 +3,24 @@
         --mainColor: #ba944d;
 }
 body {
+        background: #141e30;
+        background: -webkit-linear-gradient(to right,#243b55,#141e30);
         background: linear-gradient(to right, #243b55, #141e30);
 }
-body section {
-        margin-block: 75px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-}
-body section .image {
-        width: 100%;
-}
-body section .image img {
-        width: 200px;
-        margin: auto;
-        display: block;
-}
-body section .form {
-        margin-top: 75px;
-        padding: 25px 20px;
-        width: 35%;
-        min-width: 250px;
-        background: linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+body section form {
+        background: #ada996;
+        background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+        background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
         border-radius: 20px;
+        max-width: 500px;
+        min-width: 250px;
 }
-body section .form h2 {
+body section form h2 {
         color: var(--mainColor);
 }
-body section .form form div,
-body section .search {
-        display: flex;
-}
-body section .form form div label,
-body section .search label {
-        background-color: white;
-        width: 35px;
-        height: 35px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #dee2e6;
-        border-right: none;
-        border-radius: 6px 0 0 6px;
-}
-body section .form form div label i,
-body section .search label i {
+body section form span i {
         color: var(--mainColor);
-        font-size: 15px;
 }
-body section .form form div input,
-body section .search input {
-        padding-left: 15px;
-        width: 100%;
-        height: 35px;
-        margin-bottom: 15px;
-        border: 1px solid #dee2e6;
-        border-radius: 0 6px 6px 0;
-}
-body section .form form button {
-        height: 35px;
-        font-size: 15px;
-}
-body section .search {
-        margin-block: 35px;
-        width: 300px;
-}
-body section .table {
+.insertedData .container {
         width: 85%;
-        overflow: auto;
-}
-body section p.alert.alert-warning {
-        width: 85%;
-}
-body section .table table {
-        width: 100%;
-        border-bottom-color: #343e4b;
-}
-body section .table table thead th {
-        padding: 10px;
-        width: calc(100% / 7);
-        min-width: 150px;
-        background-color: #212529;
-        color: white;
-}
-body section .table table thead th:nth-child(1),
-body section .table table thead th:nth-child(5) {
-        width: calc(100% / 18);
-}
-body section .table table thead th:nth-child(2),
-body section .table table thead th:nth-child(3),
-body section .table table thead th:nth-child(4) {
-        width: calc(100% / 5);
 }

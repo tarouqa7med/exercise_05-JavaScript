@@ -11,69 +11,97 @@
 </head>
 <body>
         
-        <section>
-                <div class="image">
-                        <img src="./images/logo.png" alt="">
-                </div>
-                <div class="form">
-                        <h2 class="text-center pb-4">Students System</h2>
-                        <form action="" method="get">
-                                <div>
-                                        <label for="firstName">
-                                                <i class="fa-solid fa-user"></i>
-                                        </label>
-                                        <input type="text" id="firstName" name="firstName" autocomplete="off" placeholder="First Name *">
-                                </div>
-                                <div>
-                                        <label for="lastName">
-                                                <i class="fa-solid fa-user"></i>
-                                        </label>
-                                        <input type="text" id="lastName" name="lastName" autocomplete="off" placeholder="Last Name *">
-                                </div>
-                                <div>
-                                        <label for="email">
-                                                <i class="fa-solid fa-envelope"></i>
-                                        </label>
-                                        <input type="text" id="email" name="email" autocomplete="off" placeholder="Email *">
-                                </div>
-                                <div>
-                                        <label for="age">
-                                                <i class="fa-solid fa-hashtag"></i>
-                                        </label>
-                                        <input type="text" id="age" name="age" autocomplete="off" placeholder="Age *">
-                                </div>
-                                <div>
-                                        <label for="mobileNumber">
-                                                <i class="fa-solid fa-mobile"></i>
-                                        </label>
-                                        <input type="text" id="mobileNumber" name="mobileNumber" autocomplete="off" placeholder="Phone *">
-                                </div>
-                                <button type="submit" class="btn btn-success d-block w-100 submitBtn">Add</button>
-                        </form>
-                </div>
-                <div class="search">
-                        <label for="search">
-                                <i class="fa-solid fa-search"></i>
-                        </label>
-                        <input type="text" id="search" name="search" autocomplete="off" placeholder="Search...">
-                </div>
-                <p class="alert alert-warning text-center">There are no data</p>
-                <div class="table">
-                        <table>
-                                <thead>
-                                        <th>#</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Email</th>
-                                        <th>Age</th>
-                                        <th>Phone</th>
-                                        <th>Option</th>
-                                </thead>
-                                <tbody></tbody>
-                                <tfoot></tfoot>
-                        </table>
+        <section class="register" id="register">
+                <div class="container">
+                        <div class="logo text-center my-5">
+                                <img src="./images/logo.png" alt="">
+                        </div>
+                        <div class="body text-center">
+                                <form action="" class="w-50 m-auto p-3 my-5">
+                                        <h2>Students System</h2>
+                                        <div class="input-group mb-3">
+                                                <span class="input-group-text">
+                                                        <i class="fa-solid fa-user"></i>
+                                                </span>
+                                                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name *">
+                                        </div>
+                                        <div class="alert alert-danger d-none" data-error="firstName" role="alert">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                                <span class="input-group-text">
+                                                        <i class="fa-solid fa-user"></i>
+                                                </span>
+                                                <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name *">
+                                        </div>
+                                        <div class="alert alert-danger d-none" data-error="lastName" role="alert">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                                <span class="input-group-text">
+                                                        <i class="fa-solid fa-envelope"></i>
+                                                </span>
+                                                <input type="text" class="form-control" name="email" id="email" placeholder="Email *">
+                                        </div>
+                                        <div class="alert alert-danger d-none" data-error="email" role="alert">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                                <span class="input-group-text">
+                                                        <i class="fa-solid fa-hashtag"></i>
+                                                </span>
+                                                <input type="text" class="form-control" name="age" id="age" placeholder="Age *">
+                                        </div>
+                                        <div class="alert alert-danger d-none" data-error="age" role="alert">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                                <span class="input-group-text">
+                                                        <i class="fa-solid fa-mobile"></i>
+                                                </span>
+                                                <input type="text" class="form-control" name="mobile" id="mobile" placeholder="Mobile *" value="+20 ">
+                                        </div>
+                                        <div class="alert alert-danger d-none" data-error="mobile" role="alert">
+                                        </div>
+                                        <div class="input-group">
+                                                <button class="btn btn-success w-100">Add</button>
+                                        </div>
+                                </form>
+                        </div>
                 </div>
         </section>
+
+        <section class="search" id="search">
+                <div class="input-group w-25 m-auto" style="min-width: 200px;">
+                        <span class="input-group-text">
+                                <i class="fa-solid fa-search" style="color: var(--mainColor);"></i>
+                        </span>
+                        <input type="text" class="form-control" name="search" id="search" placeholder="Search...">
+                </div>
+        </section>
+        
+        <section id="insertedData" class="insertedData">
+                <div class="container py-4 my-5">
+                        <div class="alert alert-warning text-center" data-error="mobile" role="alert">
+                                There are no data
+                        </div>
+                        <div class="table-responsive m-auto rounded-3">
+                                <table class="table table-striped table-hover m-auto">
+                                        <thead class="table-dark">
+                                                <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">First Name</th>
+                                                        <th scope="col">Last Name</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Age</th>
+                                                        <th scope="col">Phone</th>
+                                                        <th scope="col">Option</th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                                
+                                        </tbody>
+                                </table>
+                        </div>
+                </div>
+        </section>
+
         <script src="./js/bootstrap.js"></script>
         <script src="./js/main.js"></script>
 </body>
